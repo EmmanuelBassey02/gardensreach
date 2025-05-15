@@ -1,0 +1,7 @@
+.services {
+    background-color: rgba(0, 0, 0, 0.68);
+    background-blend-mode: darken; 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: fixed;
+}
