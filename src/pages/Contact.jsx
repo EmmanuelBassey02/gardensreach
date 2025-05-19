@@ -21,7 +21,7 @@ const QuoteForm = () => {
               Need more info? We'd love to hear from <span className="text-lime-400 ">you!</span>
             </h2>
             
-            <p className="text-gray-400 mb-8">
+            <p className="text-gray-300 mb-8">
               Complete the form to talk to a member of our team about getting started.
             </p>
             
@@ -31,7 +31,7 @@ const QuoteForm = () => {
                   <Mail className="w-6 h-6 text-lime-400" />
                 </div>
                 <div>
-                  <p className="text-gray-400 text-sm">Interested in work with us?</p>
+                  <p className="text-gray-400 text-sm">Interested in working with us?</p>
                   <a href="mailto:gardensreach@gmail.com" className="text-white hover:text-lime-400 transition-colors">
                     gardensreach@gmail.com
                   </a>
@@ -76,7 +76,7 @@ const QuoteForm = () => {
             Ready to bring your idea to life?
             </h2>
             
-            <p className="text-gray-400 mb-8">
+            <p className="text-gray-300 mb-8 md:text-base text-[15px]">
               Tell us what you need, and we&rsquo;ll craft a custom solution tailored to your business goals. Whether it&rsquo;s a website, an app, branding, or IT support—we&rsquo;ll send you a detailed quote at no cost.
             </p>
 

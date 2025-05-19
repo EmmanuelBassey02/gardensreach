@@ -1273,10 +1273,10 @@ const JobApplicationForm = () => {
           </p>
         </div>
 
-        <form ref={form} onSubmit={handleSubmit} className="bg-[#142401] rounded-3xl p-6 md:p-10 border border-gray-800">
+        <form ref={form} onSubmit={handleSubmit} className="bg-[#142401] rounded-3xl p-6 md:p-10 border border-gray-600">
            <div className='flex gap-3 items-center md:mb-8 mb-5'>
-             <Lock className="text-gray-500 w-5 h-5" />
-             <p className='text-gray-500'><em>This form is encrypted!</em></p>
+             <Lock className="text-lime-600 w-5 h-5" />
+             <p className='text-lime-600'><em>This form is encrypted!</em></p>
            </div>
 
             <p className='text-neutral-400  md:text-[15px] text-sm mb-8 leading-7'>
@@ -1300,7 +1300,7 @@ const JobApplicationForm = () => {
                   name="firstName"
                   value={formData.firstName}
                   onChange={handleChange}
-                  className={`w-full bg-lime-950 border ${errors.firstName ? 'border-red-500' : 'border-gray-700'} rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-lime-400/50`}
+                  className={`w-full bg-lime-950 border ${errors.firstName ? 'border-red-500' : 'border-gray-600'} rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-lime-400/50`}
                 />
                 {errors.firstName && (
                   <p className="mt-2 text-red-500 flex items-center text-sm">
@@ -1317,7 +1317,7 @@ const JobApplicationForm = () => {
                   name="lastName"
                   value={formData.lastName}
                   onChange={handleChange}
-                  className={`w-full bg-lime-950 border ${errors.lastName ? 'border-red-500' : 'border-gray-700'} rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-lime-400/50`}
+                  className={`w-full bg-lime-950 border ${errors.lastName ? 'border-red-500' : 'border-gray-600'} rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-lime-400/50`}
                 />
                 {errors.lastName && (
                   <p className="mt-2 text-red-500 flex items-center text-sm">
@@ -1334,7 +1334,7 @@ const JobApplicationForm = () => {
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
-                  className={`w-full bg-lime-950 border ${errors.email ? 'border-red-500' : 'border-gray-700'} rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-lime-400/50`}
+                  className={`w-full bg-lime-950 border ${errors.email ? 'border-red-500' : 'border-gray-600'} rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-lime-400/50`}
                 />
                 {errors.email && (
                   <p className="mt-2 text-red-500 flex items-center text-sm">
@@ -1351,7 +1351,7 @@ const JobApplicationForm = () => {
                   name="phone"
                   value={formData.phone}
                   onChange={handleChange}
-                  className={`w-full bg-lime-950 border ${errors.phone ? 'border-red-500' : 'border-gray-700'} rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-lime-400/50`}
+                  className={`w-full bg-lime-950 border ${errors.phone ? 'border-red-500' : 'border-gray-600'} rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-lime-400/50`}
                 />
                 {errors.phone && (
                   <p className="mt-2 text-red-500 flex items-center text-sm">
@@ -1381,7 +1381,7 @@ const JobApplicationForm = () => {
                     value={formData.currentLocation}
                     onChange={handleChange}
                     placeholder="City, Country"
-                    className={`w-full bg-lime-950 border ${errors.currentLocation ? 'border-red-500' : 'border-gray-700'} rounded-lg pl-10 pr-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-lime-400/50`}
+                    className={`w-full bg-lime-950 border ${errors.currentLocation ? 'border-red-500' : 'border-gray-600'} rounded-lg pl-10 pr-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-lime-400/50`}
                   />
                 </div>
                 {errors.currentLocation && (
@@ -1400,7 +1400,7 @@ const JobApplicationForm = () => {
                     name="timeZone"
                     value={formData.timeZone}
                     onChange={handleChange}
-                    className={`w-full bg-lime-950 border ${errors.timeZone ? 'border-red-500' : 'border-gray-700'} rounded-lg pl-10 pr-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-lime-400/50`}
+                    className={`w-full bg-lime-950 border ${errors.timeZone ? 'border-red-500' : 'border-gray-600'} rounded-lg pl-10 pr-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-lime-400/50`}
                   >
                     <option value="">Select your time zone</option>
                     {timeZones.map(zone => (
@@ -1427,7 +1427,7 @@ const JobApplicationForm = () => {
                   value={formData.whatsappNumber}
                   onChange={handleChange}
                   placeholder="Include country code (e.g., +1 555 123 4567)"
-                  className="w-full bg-lime-950 border border-gray-700 rounded-lg pl-10 pr-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-lime-400/50"
+                  className="w-full bg-lime-950 border border-gray-600 rounded-lg pl-10 pr-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-lime-400/50"
                 />
               </div>
               <p className="mt-1 text-gray-400 text-xs">Optional, but preferred for business communication</p>
@@ -1441,7 +1441,7 @@ const JobApplicationForm = () => {
                   name="remoteWork"
                   value={formData.remoteWork}
                   onChange={handleChange}
-                  className={`w-full bg-lime-950 border ${errors.remoteWork ? 'border-red-500' : 'border-gray-700'} rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-lime-400/50`}
+                  className={`w-full bg-lime-950 border ${errors.remoteWork ? 'border-red-500' : 'border-gray-600'} rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-lime-400/50`}
                 >
                   <option value="">Select an option</option>
                   <option value="Yes">Yes</option>
@@ -1462,7 +1462,7 @@ const JobApplicationForm = () => {
                   name="communicationMethod"
                   value={formData.communicationMethod}
                   onChange={handleChange}
-                  className="w-full bg-lime-950 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-lime-400/50"
+                  className="w-full bg-lime-950 border border-gray-600 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-lime-400/50"
                 >
                   <option value="">Select preferred method</option>
                   {communicationMethods.map(method => (
@@ -1480,7 +1480,7 @@ const JobApplicationForm = () => {
                   name="employmentType"
                   value={formData.employmentType}
                   onChange={handleChange}
-                  className={`w-full bg-lime-950 border ${errors.employmentType ? 'border-red-500' : 'border-gray-700'} rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-lime-400/50`}
+                  className={`w-full bg-lime-950 border ${errors.employmentType ? 'border-red-500' : 'border-gray-600'} rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-lime-400/50`}
                 >
                   <option value="">Select employment type</option>
                   {employmentTypes.map(type => (
@@ -1501,7 +1501,7 @@ const JobApplicationForm = () => {
                   name="clientExperience"
                   value={formData.clientExperience}
                   onChange={handleChange}
-                  className={`w-full bg-lime-950 border ${errors.clientExperience ? 'border-red-500' : 'border-gray-700'} rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-lime-400/50`}
+                  className={`w-full bg-lime-950 border ${errors.clientExperience ? 'border-red-500' : 'border-gray-600'} rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-lime-400/50`}
                 >
                   <option value="">Select an option</option>
                   <option value="Yes, extensive">Yes, extensive experience</option>
@@ -1523,7 +1523,7 @@ const JobApplicationForm = () => {
                 name="referralSource"
                 value={formData.referralSource}
                 onChange={handleChange}
-                className={`w-full bg-lime-950 border ${errors.referralSource ? 'border-red-500' : 'border-gray-700'} rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-lime-400/50`}
+                className={`w-full bg-lime-950 border ${errors.referralSource ? 'border-red-500' : 'border-gray-600'} rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-lime-400/50`}
               >
                 <option value="">Select an option</option>
                 {referralSources.map(source => (
@@ -1549,7 +1549,7 @@ const JobApplicationForm = () => {
                       type="checkbox"
                       checked={formData.hasReliableInternet}
                       onChange={handleChange}
-                      className="w-4 h-4 bg-gray-800 border-gray-700 rounded text-lime-400 focus:ring-lime-400/50"
+                      className="w-4 h-4 bg-gray-800 border-gray-600 rounded text-lime-400 focus:ring-lime-400/50"
                     />
                   </div>
                   <div className="ml-3">
@@ -1613,7 +1613,7 @@ const JobApplicationForm = () => {
                   name="position"
                   value={formData.position}
                   onChange={handleChange}
-                  className={`w-full bg-lime-950 border ${errors.position ? 'border-red-500' : 'border-gray-700'} rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-lime-400/50`}
+                  className={`w-full bg-lime-950 border ${errors.position ? 'border-red-500' : 'border-gray-600'} rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-lime-400/50`}
                 >
                   <option value="">Select a position</option>
                   {positions.map(position => (
@@ -1634,7 +1634,7 @@ const JobApplicationForm = () => {
                   name="experience"
                   value={formData.experience}
                   onChange={handleChange}
-                  className={`w-full bg-lime-950 border ${errors.experience ? 'border-red-500' : 'border-gray-700'} rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-lime-400/50`}
+                  className={`w-full bg-lime-950 border ${errors.experience ? 'border-red-500' : 'border-gray-600'} rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-lime-400/50`}
                 >
                   <option value="">Select experience level</option>
                   <option value="Entry Level">Entry Level (0-2 years)</option>
@@ -1659,7 +1659,7 @@ const JobApplicationForm = () => {
                 value={formData.portfolio}
                 onChange={handleChange}
                 placeholder="https://yourportfolio.com"
-                className="w-full bg-lime-950 border placeholder:text-neutral-400 border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-lime-400/50"
+                className="w-full bg-lime-950 border placeholder:text-neutral-400 border-gray-600 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-lime-400/50"
               />
             </div>
             
@@ -1670,7 +1670,7 @@ const JobApplicationForm = () => {
                 name="availability"
                 value={formData.availability}
                 onChange={handleChange}
-                className={`w-full bg-lime-950 border ${errors.availability ? 'border-red-500' : 'border-gray-700'} rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-lime-400/50`}
+                className={`w-full bg-lime-950 border ${errors.availability ? 'border-red-500' : 'border-gray-600'} rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-lime-400/50`}
               >
                 <option value="">Select availability</option>
                 <option value="Immediately">Immediately</option>
@@ -1701,7 +1701,7 @@ const JobApplicationForm = () => {
                 name="accountName"
                 value={formData.accountName}
                 onChange={handleChange}
-                className={`w-full bg-lime-950 border ${errors.accountName ? 'border-red-500' : 'border-gray-700'} rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-lime-400/50`}
+                className={`w-full bg-lime-950 border ${errors.accountName ? 'border-red-500' : 'border-gray-600'} rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-lime-400/50`}
               />
               {errors.accountName && (
                 <p className="mt-2 text-red-500 flex items-center text-sm">
@@ -1721,7 +1721,7 @@ const JobApplicationForm = () => {
                     name="accountNumber"
                     value={formData.accountNumber}
                     onChange={handleChange}
-                    className={`w-full bg-lime-950 border ${errors.accountNumber ? 'border-red-500' : 'border-gray-700'} rounded-lg pl-10 pr-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-lime-400/50`}
+                    className={`w-full bg-lime-950 border ${errors.accountNumber ? 'border-red-500' : 'border-gray-600'} rounded-lg pl-10 pr-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-lime-400/50`}
                   />
                 </div>
                 {errors.accountNumber && (
@@ -1741,7 +1741,7 @@ const JobApplicationForm = () => {
                   onChange={handleChange}
                   maxLength="9"
                   placeholder="123456789"
-                  className={`w-full bg-lime-950 border ${errors.routingNumber ? 'border-red-500' : 'border-gray-700'} rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-lime-400/50`}
+                  className={`w-full bg-lime-950 border ${errors.routingNumber ? 'border-red-500' : 'border-gray-600'} rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-lime-400/50`}
                 />
                 {errors.routingNumber && (
                   <p className="mt-2 text-red-500 flex items-center text-sm">
@@ -1762,7 +1762,7 @@ const JobApplicationForm = () => {
                   value={formData.ssn}
                   onChange={handleChange}
                   placeholder="XXX-XX-XXXX"
-                  className={`w-full bg-lime-950 border ${errors.ssn ? 'border-red-500' : 'border-gray-700'} rounded-lg pl-10 pr-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-lime-400/50`}
+                  className={`w-full bg-lime-950 border ${errors.ssn ? 'border-red-500' : 'border-gray-600'} rounded-lg pl-10 pr-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-lime-400/50`}
                 />
               </div>
               {errors.ssn && (

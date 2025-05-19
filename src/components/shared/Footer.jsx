@@ -11,14 +11,12 @@ const Footer = () => {
           {/* Logo and Contact Info */}
           <div className="bg-black bg-opacity-50">
             
-            <h1 className="text-xl font-bold mb-3 text-lime-400">Contact</h1>
+            <h1 className="md:text-xl text-lg font-bold mb-3 text-lime-400">Contact</h1>
             
             {/* Contact Info */}
             <div className="space-y-4 ">
               <div className="flex justify-center items-center">
-                <div className="w-10 h-10 rounded-full bg-black flex items-center justify-center mr-3 border border-gray-800">
                   <Mail className="w-5 h-5 text-lime-400" />
-                </div>
                 <div>
                   <a href='mailto:gardensreach@gmail.com'>
                     <p className="text-white">gardensreach@gmail.com</p>
@@ -27,18 +25,14 @@ const Footer = () => {
               </div>
               
               <div className="flex justify-center items-center">
-                <div className="w-10 h-10 rounded-full bg-black flex items-center justify-center mr-3 border border-gray-800">
                   <MapPin className="w-5 h-5 text-lime-400" />
-                </div>
                 <div>
                   <p className="text-white">123 Creative Lane London,</p>
                 </div>
               </div>
 
               <div className="flex justify-center items-center">
-                <div className="w-10 h-10 rounded-full bg-black flex items-center justify-center mr-3 border border-gray-800">
                   <MapPin className="w-5 h-5 text-lime-400" />
-                </div>
                 <div>
                   <p className="text-white">123 Creative Lane London,</p>
                 </div>
@@ -48,7 +42,7 @@ const Footer = () => {
           
           {/* Quick Links */}
           <div className=''>
-            <h3 className="text-xl font-bold mb-3 text-lime-400">Company</h3>
+            <h3 className="md:text-xl text-lg font-bold mb-3 text-lime-400">Company</h3>
             <div className="flex flex-col gap-4">
             <Link to='/'> <p className='hover:underline'>Home</p></Link>
             <Link to='/about'> <p className='hover:underline'>About Us</p></Link>
@@ -60,7 +54,7 @@ const Footer = () => {
           
           {/* Services */}
           <div>
-            <h3 className="text-xl font-bold mb-6 text-lime-400 ">Quick Links</h3>
+            <h3 className="md:text-xl text-lg font-bold mb-6 text-lime-400 ">Quick Links</h3>
             
             <div className="flex flex-col gap-4">
              <Link to='/application-form'><p className='hover:underline'>Apply For Job</p></Link>
