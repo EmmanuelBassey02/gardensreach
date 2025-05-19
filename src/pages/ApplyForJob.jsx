@@ -1017,6 +1017,7 @@ import { ArrowRight, Check, AlertCircle, DollarSign, Lock, Globe, Clock, Phone, 
 import emailjs from '@emailjs/browser';
 import Navbar from '../components/shared/Navbar';
 import herobg from '../assets/herobg.jpg';
+import { Link } from 'react-router-dom';
 
 const JobApplicationForm = () => {
   const form = useRef();
