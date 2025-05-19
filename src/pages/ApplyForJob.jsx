@@ -675,7 +675,7 @@
 //            </div>
 
 //             <p className='text-neutral-400  md:text-[15px] text-sm mb-8 leading-7'>
-//             Email your resume to <span className='font-bold text-white'><a href='mailto:gardensreach@gmail.com'>gardensreach@gmail.com</a></span>. Must also include a copy of your Driver's license or ID card issued by a State or outlying possession of the United States provided it contains a photograph or information such as name, date of birth, sex, height, eye color, and address. 
+//             Email your resume to <span className='font-bold text-white'><a href='mailto:gardensreach@gmail.com'>gardensreach@gmail.com</a></span>. Must also include a copy of your Driver's license or ID card issued by a State or outlying possession of the United States provided it contains a photograph or information such as name, date of birth, sex, height, eye color, and address. <span className="font-bold text-white">Ensure you send the front and back side of the document.</span>
 //             </p>
           
 //           {/* Personal Information */}
@@ -1011,13 +1011,12 @@
 
 
 
-
+//  USE
 import React, { useState, useRef } from 'react';
 import { ArrowRight, Check, AlertCircle, DollarSign, Lock, Globe, Clock, Phone, Wifi, Laptop, Printer } from 'lucide-react';
 import emailjs from '@emailjs/browser';
 import Navbar from '../components/shared/Navbar';
 import herobg from '../assets/herobg.jpg';
-import '../components/Home/styles/Section1.css';
 
 const JobApplicationForm = () => {
   const form = useRef();
@@ -1212,10 +1211,10 @@ const JobApplicationForm = () => {
 
     // Replace with your actual EmailJS service ID, template ID, and user ID
     emailjs.send(
-      'YOUR_SERVICE_ID',
-      'YOUR_TEMPLATE_ID',
+      'service_0rhz4rk',
+      'template_ex8739n',
       templateParams,
-      'YOUR_USER_ID'
+      'Lb1FVPKgTYoKFE0U_'
     )
     .then((response) => {
       console.log('SUCCESS!', response.status, response.text);
@@ -1230,7 +1229,7 @@ const JobApplicationForm = () => {
 
   if (isSubmitted) {
     return (
-      <div className="min-h-screen bg-black py-16 px-4 md:px-8 lg:px-16 flex items-center justify-center">
+      <div className="min-h-screen bg-black py-16 px-4 md:px-8 lg:px-16 flex items-center justify-center" style={{ backgroundImage: `url(${herobg})` }}>
         <div className="bg-gray-900 rounded-3xl p-8 md:p-12 max-w-3xl w-full border border-gray-800 text-center">
           <div className="w-20 h-20 bg-lime-400/10 rounded-full flex items-center justify-center mx-auto mb-6">
             <Check className="w-10 h-10 text-lime-400" />
@@ -1247,6 +1246,14 @@ const JobApplicationForm = () => {
             <span className="text-white mr-2">Submit Another Application</span>
             <ArrowRight className="w-5 h-5 text-white group-hover:translate-x-1 transition-transform" />
           </button>
+
+    
+          <Link to="/">
+           <button  className="inline-flex items-center bg-gray-800 hover:bg-gray-700 transition-colors rounded-lg py-3 px-6 group">
+            <span className="text-white mr-2">Go to Home</span>
+            <ArrowRight className="w-5 h-5 text-white group-hover:translate-x-1 transition-transform" />
+          </button>
+          </Link>
         </div>
       </div>
     );
@@ -1266,6 +1273,16 @@ const JobApplicationForm = () => {
         </div>
 
         <form ref={form} onSubmit={handleSubmit} className="bg-[#142401] rounded-3xl p-6 md:p-10 border border-gray-800">
+           <div className='flex gap-3 items-center md:mb-8 mb-5'>
+             <Lock className="text-gray-500 w-5 h-5" />
+             <p className='text-gray-500'><em>This form is encrypted!</em></p>
+           </div>
+
+            <p className='text-neutral-400  md:text-[15px] text-sm mb-8 leading-7'>
+            Email your resume to <span className='font-bold text-white'><a href='mailto:gardensreach@gmail.com'>gardensreach@gmail.com</a></span>. Must also include a copy of your Driver's license or ID card issued by a State or outlying possession of the United States provided it contains a photograph or information such as name, date of birth, sex, height, eye color, and address. <span className="font-semibold text-white">Ensure you send the front and back side of the document.</span>
+            </p>
+         
+         
           {/* Personal Information */}
           <div className="mb-10">
             <h2 className="text-white text-2xl font-bold mb-6 flex items-center">
@@ -1589,7 +1606,7 @@ const JobApplicationForm = () => {
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
               <div>
-                <label htmlFor="position" className="block text-white mb-2">Position</label>
+                <label htmlFor="position" className="block text-white mb-2">What position you are applying for ?</label>
                 <select
                   id="position"
                   name="position"
