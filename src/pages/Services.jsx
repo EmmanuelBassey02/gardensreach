@@ -65,7 +65,7 @@ function Services() {
   return (
     <>
         <Navbar />
-        <section className="services md:px-[4vw] px-[3vw] h-[70vh] py-[100px] bg-fixed flex items-center justify-center " style={{ backgroundImage: `url(${herobg})` }}>
+        <section className="services md:px-[4vw] px-[3vw] h-[50vh] md:h-[60vh] lg:h-[70vh] py-[100px] bg-fixed flex items-center justify-center " style={{ backgroundImage: `url(${herobg})` }}>
         <div className="absolute bottom-0 animate-bounce right-0 w-48 h-48 md:w-64 md:h-64 bg-lime-400 rounded-full  opacity-20 blur-3xl" />
         <div className="absolute top-0 left-0 w-48 h-48 md:w-64 md:h-64 bg-lime-400 rounded-full  opacity-20 blur-3xl" />
             <div className=''> 
@@ -88,7 +88,7 @@ function Services() {
                 </div>
               </div>
               
-              <div className="flex flex-col lg:flex-row gap-8">
+              <div className="flex flex-col lg:flex-row md:gap-8 gap-4">
                 <div className="lg:w-3/5">
                   <h2 className="text-[30px] md:text-[36px] lg:text-[48px] font-bold text-white leading-relaxed sm:mb-6 mb-2">
                  Our <span className='text-lime-400'>Digital Marketing</span> Services
@@ -96,7 +96,7 @@ function Services() {
                 </div>
                 
                 <div className="lg:w-2/5">
-                  <p className="text-gray-300 text-lg">
+                  <p className="text-gray-300 md:text-[base] text-[15px]">
                   We help organizations strengthen their online presence, connect with their target audience, and achieve consistent growth in the digital space.
                   </p>
                 </div>
@@ -137,7 +137,7 @@ function Services() {
 
       <section className="md:px-[4vw] px-[3vw] h-fit pt-[80px] pb-[10px] bg-black">
           <div className="mb-8 md:px-[4vw] px-[3vw] max-w-[1400px] m-auto">
-              <div className="flex flex-col lg:flex-row gap-8">
+              <div className="flex flex-col lg:flex-row md:gap-8 gap-4">
                 <div className="lg:w-3/5">
                   <h2 className="text-[30px] md:text-[36px] lg:text-[48px] font-bold text-white leading-relaxed sm:mb-6 mb-2">
                  Our <span className='text-lime-400'>Tech/IT</span> Services
@@ -145,7 +145,7 @@ function Services() {
                 </div>
                 
                 <div className="lg:w-2/5">
-                  <p className="text-gray-300 text-lg">
+                  <p className="text-gray-300 md:text-base text-[15px]">
                   We provide end-to-end digital solutions—from user-focused design to seamless development and integrations—crafted to enhance functionality and drive business growth.
                   </p>
                 </div>

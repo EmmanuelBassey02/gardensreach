@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <footer className="bg-black text-white py-12 px-[3vw] md:px-[4vw]">
       <div className="max-w-7xl mx-auto">
-        <div className="flex flex-wrap justify-between items-center gap-8 ">
+        <div className="flex flex-wrap justify-between items-start gap-8">
           {/* Logo and Contact Info */}
           <div className="bg-black bg-opacity-50">
             
@@ -15,7 +15,7 @@ const Footer = () => {
             
             {/* Contact Info */}
             <div className="space-y-4 ">
-              <div className="flex justify-center items-center">
+              <div className="flex justify-center items-center gap-4">
                   <Mail className="w-5 h-5 text-lime-400" />
                 <div>
                   <a href='mailto:gardensreach@gmail.com'>
@@ -24,19 +24,19 @@ const Footer = () => {
                 </div>
               </div>
               
-              <div className="flex justify-center items-center">
-                  <MapPin className="w-5 h-5 text-lime-400" />
+              <div className="flex justify-center items-center gap-4">
+                  <MapPin className="w-5 h-5 text-lime-400 -ml-4" />
                 <div>
-                  <p className="text-white">123 Creative Lane London,</p>
+                  <p className="text-white">600 Montgomery St <br /> San Francisco, CA 94111</p>
                 </div>
               </div>
 
-              <div className="flex justify-center items-center">
+              {/* <div className="flex justify-center items-center">
                   <MapPin className="w-5 h-5 text-lime-400" />
                 <div>
-                  <p className="text-white">123 Creative Lane London,</p>
+                  <p className="text-white">600 Montgomery StSan Francisco, CA 94111</p>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
           
@@ -63,17 +63,12 @@ const Footer = () => {
 
              <Link to='/contact'> <p className='hover:underline'>Request a Quote</p></Link>
 
-             {/* <Link to='/contact'> <p className='hover:underline'>Contact Us</p></Link> */}
-
-
-
-              <p></p>
             </div>
           </div>
           
           {/* Support */}
           <div className='max-w-[270px]'>
-          <img src={lgo} alt="" className='md:h-18 h-8 md:mb-6 mb-4'/>
+          <img src={lgo} alt="" className='md:h-12 h-8 md:mb-6 mb-4'/>
             {/* <h3 className="text-xl font-bold mb-6 text-lime-400">LOGO</h3> */}
            <p className='text-neutral-300 text-sm'>
            <span className='font-bold text-white'>GardensReach Digital</span> is a forward-thinking digital agency committed to driving business growth and innovation through smart marketing and advanced tech solutions.

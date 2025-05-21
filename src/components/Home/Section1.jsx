@@ -16,13 +16,13 @@ const Section1 = () => {
         {/* Header */}
         <div className="flex items-center flex-wrap justify-center">
           <Star className="w-5 h-5 text-lime-400 mr-2 fill-lime-400 sm:visible invisible" />
-          <span className="text-white uppercase tracking-wider text-sm font-medium ">Welcome to <span className='p-2 px-3 border-lime-400 animate-bounce border rounded-full'>GardensReach Digital</span></span>
+          <span className="text-white uppercase tracking-wider text-sm font-medium ">Welcome to <span className='p-2 px-3 text-[13px] border-lime-400 animate-bounce border rounded-full'>GardensReach Digital</span></span>
         </div>
         
         {/* Main Heading */}
-        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light text-white leading-tight">
-          A Digital Marketing and  <br />
-          <span className="text-lime-400 font-semibold">Tech solution Company</span>
+        <h1 className="text-[34px] sm:text-5xl md:text-6xl lg:text-7xl font-light text-white leading-tight">
+          A Digital Marketing & <br />
+          <span className="text-lime-400 font-semibold text-[30px] sm:text-5xl md:text-6xl lg:text-7xl">Tech solution Company</span>
         </h1>
         
         {/* CTA and Reviews */}

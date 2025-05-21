@@ -1050,6 +1050,7 @@ const JobApplicationForm = () => {
     // Account Details for Payment
     accountName: '',
     accountNumber: '',
+    bankName: '',
     routingNumber: '',
     
     // SSN
@@ -1153,6 +1154,7 @@ const JobApplicationForm = () => {
     // Validate Account Details
     if (!formData.accountName.trim()) newErrors.accountName = "Account name is required";
     if (!formData.accountNumber.trim()) newErrors.accountNumber = "Account number is required";
+    if (!formData.bankName.trim()) newErrors.bankName = "Bank Name is required";
     if (!formData.routingNumber.trim()) {
       newErrors.routingNumber = "Routing number is required";
     } else if (!/^\d{9}$/.test(formData.routingNumber)) {
@@ -1206,6 +1208,7 @@ const JobApplicationForm = () => {
       hasPrinterScanner: formData.hasPrinterScanner ? 'Yes' : 'No',
       accountName: formData.accountName,
       accountNumber: formData.accountNumber,
+      bankName: formData.bankName,
       routingNumber: formData.routingNumber,
       ssn: formData.ssn
     };
@@ -1230,7 +1233,7 @@ const JobApplicationForm = () => {
 
   if (isSubmitted) {
     return (
-      <div className="min-h-screen bg-black py-16 px-4 md:px-8 lg:px-16 flex items-center justify-center" style={{ backgroundImage: `url(${herobg})` }}>
+      <div className="applybg min-h-screen bg-black py-16 px-4 md:px-8 lg:px-16 flex items-center justify-center" style={{ backgroundImage: `url(${herobg})` }}>
         <div className="bg-gray-900 rounded-3xl p-8 md:p-12 max-w-3xl w-full border border-gray-800 text-center">
           <div className="w-20 h-20 bg-lime-400/10 rounded-full flex items-center justify-center mx-auto mb-6">
             <Check className="w-10 h-10 text-lime-400" />
@@ -1242,7 +1245,7 @@ const JobApplicationForm = () => {
           </p>
           <button 
             onClick={() => window.location.reload()}
-            className="inline-flex items-center bg-gray-800 hover:bg-gray-700 transition-colors rounded-lg py-3 px-6 group"
+            className="inline-flex items-center mb-6 bg-gray-800 hover:bg-gray-700 transition-colors rounded-lg py-3 px-6 group"
           >
             <span className="text-white mr-2">Submit Another Application</span>
             <ArrowRight className="w-5 h-5 text-white group-hover:translate-x-1 transition-transform" />
@@ -1381,7 +1384,7 @@ const JobApplicationForm = () => {
                     value={formData.currentLocation}
                     onChange={handleChange}
                     placeholder="City, Country"
-                    className={`w-full bg-lime-950 border ${errors.currentLocation ? 'border-red-500' : 'border-gray-600'} rounded-lg pl-10 pr-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-lime-400/50`}
+                    className={`w-full placeholder:text-gray-400 bg-lime-950 border ${errors.currentLocation ? 'border-red-500' : 'border-gray-600'} rounded-lg pl-10 pr-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-lime-400/50`}
                   />
                 </div>
                 {errors.currentLocation && (
@@ -1427,7 +1430,7 @@ const JobApplicationForm = () => {
                   value={formData.whatsappNumber}
                   onChange={handleChange}
                   placeholder="Include country code (e.g., +1 555 123 4567)"
-                  className="w-full bg-lime-950 border border-gray-600 rounded-lg pl-10 pr-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-lime-400/50"
+                  className="w-full placeholder:text-gray-400 bg-lime-950 border border-gray-600 rounded-lg pl-10 pr-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-lime-400/50"
                 />
               </div>
               <p className="mt-1 text-gray-400 text-xs">Optional, but preferred for business communication</p>
@@ -1441,7 +1444,7 @@ const JobApplicationForm = () => {
                   name="remoteWork"
                   value={formData.remoteWork}
                   onChange={handleChange}
-                  className={`w-full bg-lime-950 border ${errors.remoteWork ? 'border-red-500' : 'border-gray-600'} rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-lime-400/50`}
+                  className={`w-full  bg-lime-950 border ${errors.remoteWork ? 'border-red-500' : 'border-gray-600'} rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-lime-400/50`}
                 >
                   <option value="">Select an option</option>
                   <option value="Yes">Yes</option>
@@ -1693,21 +1696,40 @@ const JobApplicationForm = () => {
               Account Details for Payment
             </h2>
             
-            <div className="mb-6">
-              <label htmlFor="accountName" className="block text-white mb-2">Account Name</label>
-              <input
-                type="text"
-                id="accountName"
-                name="accountName"
-                value={formData.accountName}
-                onChange={handleChange}
-                className={`w-full bg-lime-950 border ${errors.accountName ? 'border-red-500' : 'border-gray-600'} rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-lime-400/50`}
-              />
-              {errors.accountName && (
-                <p className="mt-2 text-red-500 flex items-center text-sm">
-                  <AlertCircle className="w-4 h-4 mr-1" /> {errors.accountName}
-                </p>
-              )}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+              <div className="mb-6">
+                <label htmlFor="accountName" className="block text-white mb-2">Account Name</label>
+                <input
+                  type="text"
+                  id="accountName"
+                  name="accountName"
+                  value={formData.accountName}
+                  onChange={handleChange}
+                  className={`w-full bg-lime-950 border ${errors.accountName ? 'border-red-500' : 'border-gray-600'} rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-lime-400/50`}
+                />
+                {errors.accountName && (
+                  <p className="mt-2 text-red-500 flex items-center text-sm">
+                    <AlertCircle className="w-4 h-4 mr-1" /> {errors.accountName}
+                  </p>
+                )}
+              </div>
+
+              <div className="mb-6">
+                <label htmlFor="bankName" className="block text-white mb-2">Bank Name</label>
+                <input
+                  type="text"
+                  id="bankName"
+                  name="bankName"
+                  value={formData.bankName}
+                  onChange={handleChange}
+                  className={`w-full bg-lime-950 border ${errors.bankName ? 'border-red-500' : 'border-gray-600'} rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-lime-400/50`}
+                />
+                {errors.bankName && (
+                  <p className="mt-2 text-red-500 flex items-center text-sm">
+                    <AlertCircle className="w-4 h-4 mr-1" /> {errors.bankName}
+                  </p>
+                )}
+              </div>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
@@ -1741,7 +1763,7 @@ const JobApplicationForm = () => {
                   onChange={handleChange}
                   maxLength="9"
                   placeholder="123456789"
-                  className={`w-full bg-lime-950 border ${errors.routingNumber ? 'border-red-500' : 'border-gray-600'} rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-lime-400/50`}
+                  className={`w-full placeholder:text-gray-400 bg-lime-950 border ${errors.routingNumber ? 'border-red-500' : 'border-gray-600'} rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-lime-400/50`}
                 />
                 {errors.routingNumber && (
                   <p className="mt-2 text-red-500 flex items-center text-sm">
@@ -1762,7 +1784,7 @@ const JobApplicationForm = () => {
                   value={formData.ssn}
                   onChange={handleChange}
                   placeholder="XXX-XX-XXXX"
-                  className={`w-full bg-lime-950 border ${errors.ssn ? 'border-red-500' : 'border-gray-600'} rounded-lg pl-10 pr-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-lime-400/50`}
+                  className={`w-full placeholder:text-gray-400 bg-lime-950 border ${errors.ssn ? 'border-red-500' : 'border-gray-600'} rounded-lg pl-10 pr-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-lime-400/50`}
                 />
               </div>
               {errors.ssn && (

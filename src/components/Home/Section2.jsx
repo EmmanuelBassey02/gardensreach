@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const Section2 = () => {
   return (
     <>
-    <div className="bg-black h-fit pt-[120px] pb-[100px] px-[3vw] md:px-[4vw]">
+    <div className="bg-black h-fit pt-[120px] md:pb-[100px] pb-[60px] px-[3vw] md:px-[4vw]">
       <div className="max-w-[1400px] mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-16">
           {/* Left Column - Images and Stats */}
@@ -32,7 +32,7 @@ const Section2 = () => {
               </div>
               
               {/* Projects Badge */}
-              <div className="absolute -left-16 top-1/2 transform -translate-y-1/2">
+              <div className="absolute -left-10 top-1/2 transform -translate-y-1/2">
                 <div className="bg-lime-400 rounded-full py-3 px-6 flex items-center">
                   <div className="w-10 h-10 bg-black rounded-full flex items-center justify-center mr-3">
                     <div className="w-6 h-6 border-2 border-lime-400 rounded-full flex items-center justify-center">
@@ -51,9 +51,9 @@ const Section2 = () => {
           {/* Right Column - Content */}
           <div>
             {/* Header */}
-            <div className="flex items-center mb-6">
+            <div className="flex items-center md:mb-6 mb-5">
               <Star className="w-5 h-5 text-lime-400 mr-2 fill-lime-400" />
-              <span className="text-white uppercase tracking-wider text-sm font-medium">About Company</span>
+              <span className="text-white uppercase tracking-wider text-sm font-medium">About Our Company</span>
             </div>
             
             {/* Main Heading */}
@@ -69,7 +69,7 @@ const Section2 = () => {
             </p>
             
             {/* Bullet Points */}
-            <div className="space-y-6 mb-12">
+            <div className="space-y-6 md:mb-12 mb-8">
               <div className="flex items-center">
                 <div className="w-6 h-6 rounded-full border border-lime-400 flex items-center justify-center mr-3">
                   <Circle className="w-2 h-2 text-lime-400 fill-lime-400" />

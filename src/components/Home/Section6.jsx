@@ -51,7 +51,7 @@ function Section6() {
                 </div>
                 
                 {/* Main Heading */}
-                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white text-center mb-16">
+                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white text-center md:mb-16 mb-10">
                 Celebrating our <span className="text-lime-400">achievements</span> in<br />
                 IT excellence
                 </h2>

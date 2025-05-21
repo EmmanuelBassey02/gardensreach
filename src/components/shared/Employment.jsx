@@ -22,7 +22,7 @@ const Employment = () => {
             
             
             {/* Job aVAILability Description */}
-            <p className="text-gray-300 text-lg max-w-xl mb-5">
+            <p className="text-gray-300 md:text-base text-[15px] max-w-xl mb-5">
             At GardensReach Digital, we&rsquo;re always on the lookout for curious minds, passionate creators, and solution-driven professionals ready to shape the future of digital. If you&rsquo;re excited to work in a collaborative, fast-paced environment where innovation meets impact — we&rsquo;d love to hear from you. 
             <span className="text-white font-bold "> Explore open roles and become a part of our team.</span>
             </p>

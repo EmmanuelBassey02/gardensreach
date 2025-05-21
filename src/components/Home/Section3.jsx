@@ -8,7 +8,7 @@ const Section3 = () => {
     <section className="bg-black h-fit py-12 px-[3vw] md:px-[4vw]">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
-        <div className="flex items-center mb-8">
+        <div className="flex items-center md:mb-8 mb-6">
           <Star className="w-5 h-5 text-lime-400 mr-2 fill-lime-400" />
           <span className="text-white uppercase tracking-wider text-sm font-medium">Why Choose Us</span>
         </div>
@@ -17,17 +17,17 @@ const Section3 = () => {
           <div>
             {/* Main Heading */}
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-relaxed">
-              Trusted <span className="text-lime-400">expertise</span> for your<br />
+              Trusted <span className="text-lime-400">expertise</span> for your
               technology needs
             </h2>
             
             {/* Description */}
-            <p className="text-gray-300 mb-12 text-lg max-w-xl">
+            <p className="text-gray-300 mb-12 md:text-base text-[15px] max-w-xl">
               We&rsquo;re not just a service provider — we&rsquo;re a digital partner. Our approach is collaborative, transparent, and built for growth. With a team of experienced professionals, we ensure every solution is purposeful, scalable, and future-ready.
             </p>
             
             {/* 24/7 Support Feature */}
-            <div className="mb-12">
+            <div className="md:mb-12 mb-6">
               <div className="flex items-center mb-4">
                 <div className="w-10 h-10 rounded-full border border-lime-400 flex items-center justify-center mr-4">
                   <Headphones className="w-5 h-5 text-lime-400" />
@@ -37,7 +37,7 @@ const Section3 = () => {
             </div>
             
             {/* Divider */}
-            <div className="border-t border-gray-800 mb-8"></div>
+            <div className="border-t border-gray-800 md:mb-8 mb-2"></div>
             
             
             {/* Contact Button */}

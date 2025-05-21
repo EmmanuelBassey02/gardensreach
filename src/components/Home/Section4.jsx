@@ -1,5 +1,6 @@
 import React from 'react';
-import { Circle, ArrowRight } from 'lucide-react';
+import { Star, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const HowItWorksSection = () => {
   const steps = [
@@ -63,33 +64,36 @@ const HowItWorksSection = () => {
     <div className="bg-black h-fit py-16 px-4 md:px-8 lg:px-16">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
-        <div className="flex items-center mb-6">
-          <div className="flex items-center justify-center w-6 h-6 rounded-full bg-lime-400 mr-2">
-            <Circle className="w-3 h-3 text-lime-400 fill-lime-400" />
-          </div>
-          <span className="text-white text-lg">How It Work</span>
+        <div className="flex items-center md:mb-6 mb-3">
+           <div className="flex items-center md:mb-6 mb-4">
+              <Star className="w-5 h-5 text-lime-400 mr-2 fill-lime-400" />
+              <span className="text-white uppercase tracking-wider text-sm font-medium">How It Work</span>
+            </div>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
           {/* Main Heading */}
           <div>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-300 leading-tight mb-8">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-300 leading-tight md:mb-8 mb-3">
               Simple Steps to<br />Digital Success
             </h2>
           </div>
 
           {/* Description and CTA */}
           <div className="flex flex-col justify-center">
-            <p className="text-gray-400 mb-8 md:text-base text-sm">
+            <p className="text-gray-400 mb-8 md:text-base text-[15px]">
             At GardensReach Digital, we follow a streamlined, client-first approach designed to keep your goals at the center of everything we do. From initial discovery to final delivery, our process is built for clarity, efficiency, and accountability. We take time to understand your unique needs, craft tailored strategies, and execute with precision—ensuring every project not only meets expectations but delivers measurable, impactful results.
             </p>
+
             <div>
+              <Link to="/contact">
               <button className="flex items-center text-lime-500 hover:text-lime-400 transition-colors group">
                 <span className="mr-2 font-medium">Get Started Now</span>
                 <div className="group-hover:translate-x-1 transition-transform">
-                  <ArrowRight className="w-5 h-5" />
+                  <ArrowRight className="w-5 h-5 animate-bounce" />
                 </div>
               </button>
+              </Link>
             </div>
           </div>
         </div>

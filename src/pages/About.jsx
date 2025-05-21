@@ -14,7 +14,7 @@ function About() {
   return (
     <>
         <Navbar />
-        <section className="about md:px-[4vw] px-[3vw] h-[70vh] py-[100px] bg-fixed flex items-center justify-center " style={{ backgroundImage: `url(${herobg})` }}>
+        <section className="about md:px-[4vw] px-[3vw] h-[50vh] md:h-[60vh] lg:h-[70vh] py-[100px] bg-fixed flex items-center justify-center " style={{ backgroundImage: `url(${herobg})` }}>
         <div className="absolute bottom-0 animate-bounce right-0 w-48 h-48 md:w-64 md:h-64 bg-lime-400 rounded-full  opacity-20 blur-3xl" />
         <div className="absolute top-0 left-0 w-48 h-48 md:w-64 md:h-64 bg-lime-400 rounded-full  opacity-20 blur-3xl" />
             <div className=''> 
@@ -201,12 +201,12 @@ function About() {
               <span className="text-white uppercase tracking-wider text-sm font-medium">We're Hiring – Come Make an Impact</span>
             </div>
             
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-12 leading-tight">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white md:mb-12 mb-7 leading-tight">
             Career & <span className="text-lime-400">Recruitment</span>
             </h2>
             
             
-            <p className="text-gray-300 text-lg max-w-xl">
+            <p className="text-gray-300 md:text-base text-[15px] max-w-xl">
               At <span className='font-bold text-lime-400'>GardensReach Digital</span> we&rsquo;re more than a company — we&rsquo;re a team of innovators, creators, and problem-solvers driven by a passion for digital excellence. Whether you're a tech expert, a marketing strategist, or a creative thinker, there&rsquo;s a place for you here.</p>
             <p className='text-white text-lg max-w-xl font-bold '> We&rsquo;re always looking for fresh talent ready to grow, collaborate, and make an impact in the digital space.</p> 
             
