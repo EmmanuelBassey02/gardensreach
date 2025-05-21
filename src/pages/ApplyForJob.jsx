@@ -1018,6 +1018,7 @@ import emailjs from '@emailjs/browser';
 import Navbar from '../components/shared/Navbar';
 import herobg from '../assets/herobg.jpg';
 import { Link } from 'react-router-dom';
+import Footer from '../components/shared/Footer';
 
 const JobApplicationForm = () => {
   const form = useRef();
@@ -1065,11 +1066,21 @@ const JobApplicationForm = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   const positions = [
+     "Social Media Marketer",
+     "SEO Expert",
+     "Content Marketer",
+     "Facebood Ads Expert",
+     "Customer Care Representative",
+     "Sales Rep",
+     "HR Manager",
+     "Frontend Developer",
+     "Backend Developer",
+     "UI/UX Designer",
+     "Wordpress Developer",
+     "Mobile App Developer",
+     "Data Analyst",
     "Software Developer",
-    "Mobile App Developer",
-    "UI/UX Designer",
     "API Developer",
-    "Data Analyst",
     "Software Maintenance Engineer"
   ];
 
@@ -1849,6 +1860,8 @@ const JobApplicationForm = () => {
         </form>
       </div>
     </div>
+
+    <Footer/>
     </>
   );
 };
