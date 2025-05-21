@@ -219,7 +219,7 @@ const QuoteForm = () => {
     // Replace these with your actual EmailJS service ID, template ID, and user ID
     emailjs.sendForm(
       'service_0rhz4rk',
-      'template_ex8739n',
+      'template_7zuw31k',
       form.current,
       'Lb1FVPKgTYoKFE0U_'
     )

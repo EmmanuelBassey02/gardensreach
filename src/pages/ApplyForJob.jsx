@@ -1076,6 +1076,7 @@ const JobApplicationForm = () => {
      "Frontend Developer",
      "Backend Developer",
      "UI/UX Designer",
+     "Graphics Designer",
      "Wordpress Developer",
      "Mobile App Developer",
      "Data Analyst",
