@@ -29,7 +29,7 @@ const Section1 = () => {
         <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
 
         <Link to='/contact'>          
-          <button className="flex items-center bg-gray-800 hover:bg-gray-900 border-2 hover:border-lime-400 transition-colors rounded-full py-3 px-6 group">
+          <button className="flex items-center bg-gray-800 hover:bg-gray-900 border-2 border-gray-500 hover:border-lime-400 transition-colors rounded-full py-3 px-6 group">
             <span className="text-white md:text-lg text-base mr-4">Get Quote</span>
             <div className="w-8 h-8 bg-lime-400 rounded-full flex items-center justify-center group-hover:bg-lime-500 transition-colors">
               <ArrowRight className="w-4 h-4 text-black" />
