@@ -396,9 +396,27 @@ const QuoteForm = () => {
                     className={`bg-[#0d1801] placeholder:text-gray-400 border ${errors.service ? 'border-red-500' : 'border-lime-800'} text-gray-400 rounded-md px-4 py-3 focus:outline-none focus:border-lime-700 w-full`}
                   >
                     <option>Select Service</option>
-                    <option>Web Development</option>
+                    <option>Social Media Marketing</option>
+                    <option>SEO</option>
+                    <option>Content Marketing</option>
+                    <option>Email Marketing</option>
+                    <option>Facebook Advert/Campaign</option>
+                    <option>Copywriting</option>
                     <option>Digital Marketing</option>
-                    <option>Graphic Design</option>
+                    {/* <option>Sales Rep</option> */}
+                    {/* <option>HR Manager</option> */}
+                    <option>Web Development</option>
+                    <option>Database Administration</option>
+                    <option>UI/UX Design</option>
+                    <option>Cybersecurity Services</option>
+                    <option>Cloud Services(AWS, Azure, Google Cloud)</option>
+                    <option>Graphics Design</option>
+                    <option>Web Design</option>
+                    <option>Mobile App Development</option>
+                    <option>Data Analysis</option>
+                    <option>Custom Software Development</option>
+                    <option>API Development</option>
+                    <option>Software Maintenance</option>
                   </select>
                   {errors.service && (
                     <p className="mt-1 text-red-500 text-sm flex items-center">

@@ -1068,8 +1068,10 @@ const JobApplicationForm = () => {
 
   const positions = [
      "Social Media Marketer",
+     "Email Marketer",
      "SEO Expert",
      "Content Marketer",
+     "Copywriter",
      "Facebook Ads Expert",
      "Customer Care Representative",
      "Sales Rep",
@@ -1078,6 +1080,8 @@ const JobApplicationForm = () => {
      "Backend Developer",
      "UI/UX Designer",
      "Graphics Designer",
+     "Cloud Engineer(AWS, Azure, Google Cloud)",
+     "Cybersecurity Expert",
      "Wordpress Developer",
      "Mobile App Developer",
      "Data Analyst",
