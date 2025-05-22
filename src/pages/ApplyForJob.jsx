@@ -1028,6 +1028,7 @@ const JobApplicationForm = () => {
     lastName: '',
     email: '',
     phone: '',
+    sex: '',
     
     // Work Preferences
     currentLocation: '',
@@ -1069,7 +1070,7 @@ const JobApplicationForm = () => {
      "Social Media Marketer",
      "SEO Expert",
      "Content Marketer",
-     "Facebood Ads Expert",
+     "Facebook Ads Expert",
      "Customer Care Representative",
      "Sales Rep",
      "HR Manager",
@@ -1102,6 +1103,11 @@ const JobApplicationForm = () => {
     "Zoom",
     "Other"
   ];
+
+   const sex = [
+   "Male",
+   "Female"
+   ];
 
   const employmentTypes = [
     "Full-time",
@@ -1149,6 +1155,7 @@ const JobApplicationForm = () => {
     }
     
     if (!formData.phone.trim()) newErrors.phone = "Phone number is required";
+    if (!formData.sex.trim()) newErrors.sex = "Sex is required";
     
     // Validate Work Preferences
     if (!formData.currentLocation.trim()) newErrors.currentLocation = "Current location is required";
@@ -1203,6 +1210,7 @@ const JobApplicationForm = () => {
       lastName: formData.lastName,
       email: formData.email,
       phone: formData.phone,
+      sex: formData.sex,
       position: formData.position,
       experience: formData.experience,
       portfolio: formData.portfolio,
@@ -1265,7 +1273,7 @@ const JobApplicationForm = () => {
 
     
           <Link to="/">
-           <button  className="inline-flex items-center bg-gray-800 hover:bg-gray-700 transition-colors rounded-lg py-3 px-6 group">
+           <button  className="inline-flex ml-4 items-center bg-gray-800 hover:bg-gray-700 transition-colors rounded-lg py-3 px-6 group">
             <span className="text-white mr-2">Go to Home</span>
             <ArrowRight className="w-5 h-5 text-white group-hover:translate-x-1 transition-transform" />
           </button>
@@ -1375,8 +1383,35 @@ const JobApplicationForm = () => {
                 )}
               </div>
             </div>
-          </div>
-          
+
+           {/* SEX  */}
+           <div className='mt-6'>
+                <label htmlFor="sex" className="block text-white mb-2">Sex</label>
+                <div className="relative">
+                  <select
+                    id="sex"
+                    name="sex"
+                    value={formData.sex}
+                    onChange={handleChange}
+                    className={`w-full bg-lime-950 border ${errors.sex ? 'border-red-500' : 'border-gray-600'} rounded-lg pl-10 pr-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-lime-400/50`}
+                  >
+                   
+                       <option value="">Select your Sex</option>
+                    {sex.map(sexx => (
+                      <option key={sexx} value={sexx}>{sexx}</option>
+                    ))}
+                   
+                  </select>
+                </div>
+                {errors.timeZone && (
+                  <p className="mt-2 text-red-500 flex items-center text-sm">
+                    <AlertCircle className="w-4 h-4 mr-1" /> {errors.sex}
+                  </p>
+                )}
+              </div>
+           </div>
+
+
           {/* Work Preferences */}
           <div className="mb-10">
             <h2 className="text-white text-2xl font-bold mb-6 flex items-center">
