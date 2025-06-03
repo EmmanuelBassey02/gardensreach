@@ -26,7 +26,7 @@ const Footer = () => {
             <h3 className="md:text-xl text-lg font-bold mb-6 text-lime-400 ">Quick Links</h3>
             
             <div className="flex flex-col gap-4">
-             <Link to='/sjob-application'><p className='hover:underline'>Apply For Job</p></Link>
+             <Link to='/job-application'><p className='hover:underline'>Apply For Job</p></Link>
 
              <Link to='/contact'> <p className='hover:underline'>Contact Us</p></Link>
 
@@ -34,7 +34,6 @@ const Footer = () => {
 
             </div>
           </div>
-
 
 
            {/* Logo and Contact Info */}
