@@ -276,8 +276,8 @@ const QuoteForm = () => {
                 </div>
                 <div>
                   <p className="text-gray-400 text-sm">Interested in working with us?</p>
-                  <a href="mailto:gardensreach@gmail.com" className="text-white hover:text-lime-400 transition-colors">
-                    gardensreach@gmail.com
+                  <a href="mailto:gardensreach@outlook.com" className="text-white hover:text-lime-400 transition-colors">
+                  gardensreach@outlook.com
                   </a>
                 </div>
               </div>
@@ -288,8 +288,8 @@ const QuoteForm = () => {
                 </div>
                 <div>
                   <p className="text-gray-400 text-sm">Feel Free To Call Us</p>
-                  <a href="tel:(528)456-7592" className="text-white hover:text-[#d5f379] transition-colors">
-                    (528) 456-7592
+                  <a href="tel:+1(667)442-7322" className="text-white hover:text-[#d5f379] transition-colors">
+                  +1(667)442-7322
                   </a>
                 </div>
               </div>
@@ -470,4 +470,4 @@ const QuoteForm = () => {
   );
 };
 
-export default QuoteForm;
+export default QuoteForm; 

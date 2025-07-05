@@ -47,7 +47,7 @@ const Footer = () => {
                   <Mail className="w-5 h-5 text-lime-400" />
                 <div>
                   <a href='mailto:gardensreach@gmail.com'>
-                    <p className="text-white">gardensreach@gmail.com</p>
+                    <p className="text-white">gardensreach@outlook.com</p>
                   </a>
                 </div>
               </div>
